@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta viewport para que se adapte a dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programarte.cl | Si lo puedes imaginar, lo podemos programar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css para animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- GLightbox para el portafolio -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <!-- Archivo CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+
+  <!-- Navbar (colapsable en móvil) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Programarte.cl</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+           <li class="nav-item"><a class="nav-link" href="#inicio" id="nav-inicio">Inicio</a></li>
+           <li class="nav-item"><a class="nav-link" href="#sobre-nosotros" id="nav-sobre-nosotros">Sobre Nosotros</a></li>
+           <li class="nav-item"><a class="nav-link" href="#servicios" id="nav-servicios">Servicios</a></li>
+           <li class="nav-item"><a class="nav-link" href="#portfolio" id="nav-portfolio">Portafolio</a></li>
+           <li class="nav-item"><a class="nav-link" href="#testimonios" id="nav-testimonios">Testimonios</a></li>
+           <li class="nav-item"><a class="nav-link" href="#contacto" id="nav-contacto">Contacto</a></li>
+           <!-- Botón para cambiar idioma con bandera -->
+           <li class="nav-item">
+             <button id="langSwitcher" class="btn btn-link nav-link">
+               <img id="flag-icon" src="https://flagcdn.com/w20/us.png" alt="US Flag" style="vertical-align:middle; margin-right:5px;"> EN
+             </button>
+           </li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section con fondo de partículas y efecto typewriter -->
+  <header id="inicio" class="hero">
+    <!-- Fondo interactivo con partículas -->
+    <div id="particles-js"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="display-4"><span id="typed"></span></h1>
+      <p id="hero-subtitle" class="lead animate__animated animate__fadeInUp">
+        Si lo puedes imaginar, lo podemos programar
+      </p>
+      <a href="#contacto" id="hero-contact-btn" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">
+        Contáctanos
+      </a>
+    </div>
+  </header>
+
+  <!-- Sobre Nosotros Section -->
+  <section id="sobre-nosotros" class="section">
+    <div class="container">
+      <div class="row align-items-center">
+         <div class="col-md-6">
+           <h2 id="about-heading" class="animate__animated animate__fadeInLeft">Sobre Nosotros</h2>
+           <p id="about-paragraph" class="animate__animated animate__fadeInLeft animate__delay-1s">
+             En Programarte.cl combinamos creatividad y tecnología para transformar ideas en soluciones digitales a la medida. Nuestro equipo se dedica a ofrecer desarrollos innovadores y eficientes, siempre con un toque artístico.
+           </p>
+         </div>
+         <div class="col-md-6">
+           <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1170&auto=format&fit=crop" alt="Sobre Nosotros" class="img-fluid rounded shadow animate__animated animate__fadeInRight">
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Section -->
+  <section id="servicios" class="section bg-light">
+    <div class="container">
+      <h2 id="services-heading" class="text-center mb-5">Nuestros Servicios</h2>
+      <div class="row text-center">
+         <div class="col-md-3 col-sm-6 mb-4">
+           <div class="p-4">
+             <i class="fas fa-code fa-3x mb-3"></i>
+             <h4 id="service1-title">Desarrollo a Medida</h4>
+             <p id="service1-desc">Programas y soluciones personalizadas para tu negocio.</p>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6 mb-4">
+           <div class="p-4">
+             <i class="fas fa-globe fa-3x mb-3"></i>
+             <h4 id="service2-title">Páginas Web</h4>
+             <p id="service2-desc">Diseño y desarrollo de sitios web responsivos y modernos.</p>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6 mb-4">
+           <div class="p-4">
+             <i class="fas fa-cogs fa-3x mb-3"></i>
+             <h4 id="service3-title">Mantenimiento</h4>
+             <p id="service3-desc">Soporte continuo y actualizaciones para tu plataforma.</p>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6 mb-4">
+           <div class="p-4">
+             <i class="fas fa-lightbulb fa-3x mb-3"></i>
+             <h4 id="service4-title">Consultoría</h4>
+             <p id="service4-desc">Asesoría en soluciones informáticas y transformación digital.</p>
+           </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 id="portfolio-heading" class="text-center mb-5 animate__animated animate__fadeInUp">Portafolio</h2>
+      <div class="row">
+        <!-- Ejemplo de proyecto con Lightbox -->
+        <div class="col-md-4 mb-4">
+           <a href="https://via.placeholder.com/800x600" class="glightbox">
+             <div class="card">
+               <img src="https://plus.unsplash.com/premium_photo-1661677279312-dae00738c058?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3" class="card-img-top" alt="Proyecto 1">
+               <div class="card-body">
+                 <h5 class="card-title">Proyecto 1</h5>
+                 <p class="card-text">Descripción breve del proyecto.</p>
+               </div>
+             </div>
+           </a>
+        </div>
+        <div class="col-md-4 mb-4">
+           <a href="https://via.placeholder.com/800x600" class="glightbox">
+             <div class="card">
+               <img src="https://plus.unsplash.com/premium_photo-1681487696807-3d16216cbbf0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="card-img-top" alt="Proyecto 2">
+               <div class="card-body">
+                 <h5 class="card-title">Proyecto 2</h5>
+                 <p class="card-text">Descripción breve del proyecto.</p>
+               </div>
+             </div>
+           </a>
+        </div>
+        <div class="col-md-4 mb-4">
+           <a href="https://via.placeholder.com/800x600" class="glightbox">
+             <div class="card">
+               <img src="https://plus.unsplash.com/premium_photo-1661668768583-f1a8ad8d3cdd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" class="card-img-top" alt="Proyecto 3">
+               <div class="card-body">
+                 <h5 class="card-title">Proyecto 3</h5>
+                 <p class="card-text">Descripción breve del proyecto.</p>
+               </div>
+             </div>
+           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios Section -->
+  <section id="testimonios" class="section bg-light">
+    <div class="container">
+      <h2 id="testimonials-heading" class="text-center mb-5 animate__animated animate__fadeInUp">Testimonios</h2>
+      <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial p-4 text-center">
+              <p id="testimonial1">
+                "Gracias a Programarte.cl, nuestra presencia digital se transformó y nuestros clientes nos encuentran de manera efectiva. ¡Totalmente recomendado!"
+              </p>
+              <p class="text-end"><strong>- Cliente Satisfecho</strong></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial p-4 text-center">
+              <p id="testimonial2">
+                "El equipo combinó creatividad y profesionalismo para desarrollar un sitio web que refleja la esencia de nuestro negocio."
+              </p>
+              <p class="text-end"><strong>- Cliente Satisfecho</strong></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 id="contact-heading" class="text-center mb-5 animate__animated animate__fadeInUp">Contacto</h2>
+      <div class="row">
+         <div class="col-md-8 mx-auto">
+           <form action="enviar.php" method="post">
+             <div class="mb-3">
+               <label id="label-name" for="nombre" class="form-label">Nombre:</label>
+               <input type="text" class="form-control" id="nombre" name="nombre" required>
+             </div>
+             <div class="mb-3">
+               <label id="label-email" for="email" class="form-label">Email:</label>
+               <input type="email" class="form-control" id="email" name="email" required>
+             </div>
+             <div class="mb-3">
+               <label id="label-message" for="mensaje" class="form-label">Mensaje:</label>
+               <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+             </div>
+             <div class="d-grid">
+               <button id="contact-submit" type="submit" class="btn btn-primary">Enviar</button>
+             </div>
+           </form>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <div class="social-icons mb-3">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p id="footer-text">&copy; 2025 Programarte.cl. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botón "Scroll to Top" -->
+  <button id="scrollToTop" title="Subir" class="btn btn-secondary"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts externos -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  
+  <!-- Scripts personalizados -->
+  <script>
+    // Preloader: ocultar una vez cargue la página
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+      setTimeout(() => preloader.style.display = 'none', 500);
+    });
+    
+    // Función para inicializar Typed.js (se reinicializará al cambiar idioma)
+    var typedInstance;
+    function reinitTyped(stringsArray) {
+      if (typedInstance) {
+        typedInstance.destroy();
+      }
+      typedInstance = new Typed('#typed', {
+        strings: stringsArray,
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true
+      });
+    }
+    
+    // Inicializar Particles.js
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+          "polygon": { "nb_sides": 5 }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": { "enable": false }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": { "enable": false }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 100, "duration": 0.4 }
+        }
+      },
+      "retina_detect": true
+    });
+    
+    // Inicializar GLightbox
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+    });
+
+    // Botón "Scroll to Top"
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    };
+    scrollToTopBtn.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Diccionario con traducciones para español (es) e inglés (en)
+    const translations = {
+      es: {
+        title: "Programarte.cl | Si lo puedes imaginar, lo podemos programar",
+        nav: {
+          inicio: "Inicio",
+          sobreNosotros: "Sobre Nosotros",
+          servicios: "Servicios",
+          portfolio: "Portafolio",
+          testimonios: "Testimonios",
+          contacto: "Contacto"
+        },
+        hero: {
+          typed: ["Bienvenido a Programarte.cl", "Creamos soluciones digitales", "Innovación a tu alcance"],
+          subtitle: "Si lo puedes imaginar, lo podemos programar",
+          contactBtn: "Contáctanos"
+        },
+        about: {
+          heading: "Sobre Nosotros",
+          paragraph: "En Programarte.cl combinamos creatividad y tecnología para transformar ideas en soluciones digitales a la medida. Nuestro equipo se dedica a ofrecer desarrollos innovadores y eficientes, siempre con un toque artístico."
+        },
+        services: {
+          heading: "Nuestros Servicios",
+          service1: {
+            title: "Desarrollo a Medida",
+            description: "Programas y soluciones personalizadas para tu negocio."
+          },
+          service2: {
+            title: "Páginas Web",
+            description: "Diseño y desarrollo de sitios web responsivos y modernos."
+          },
+          service3: {
+            title: "Mantenimiento",
+            description: "Soporte continuo y actualizaciones para tu plataforma."
+          },
+          service4: {
+            title: "Consultoría",
+            description: "Asesoría en soluciones informáticas y transformación digital."
+          }
+        },
+        portfolio: {
+          heading: "Portafolio"
+        },
+        testimonials: {
+          heading: "Testimonios"
+        },
+        contact: {
+          heading: "Contacto",
+          nameLabel: "Nombre:",
+          emailLabel: "Email:",
+          messageLabel: "Mensaje:",
+          submit: "Enviar"
+        },
+        footer: {
+          text: "© 2025 Programarte.cl. Todos los derechos reservados."
+        }
+      },
+      en: {
+        title: "Programarte.cl | If you can imagine it, we can program it",
+        nav: {
+          inicio: "Home",
+          sobreNosotros: "About Us",
+          servicios: "Services",
+          portfolio: "Portafolio",
+          testimonios: "Testimonials",
+          contacto: "Contact"
+        },
+        hero: {
+          typed: ["Welcome to Programarte.cl", "We create digital solutions", "Innovation at your fingertips"],
+          subtitle: "If you can imagine it, we can program it",
+          contactBtn: "Contact Us"
+        },
+        about: {
+          heading: "About Us",
+          paragraph: "At Programarte.cl, we combine creativity and technology to transform ideas into tailor-made digital solutions. Our team is dedicated to delivering innovative and efficient developments, always with an artistic touch."
+        },
+        services: {
+          heading: "Our Services",
+          service1: {
+            title: "Custom Development",
+            description: "Custom programs and solutions for your business."
+          },
+          service2: {
+            title: "Websites",
+            description: "Design and development of responsive and modern websites."
+          },
+          service3: {
+            title: "Maintenance",
+            description: "Continuous support and updates for your platform."
+          },
+          service4: {
+            title: "Consulting",
+            description: "Advisory on IT solutions and digital transformation."
+          }
+        },
+        portfolio: {
+          heading: "Portfolio"
+        },
+        testimonials: {
+          heading: "Testimonials"
+        },
+        contact: {
+          heading: "Contact",
+          nameLabel: "Name:",
+          emailLabel: "Email:",
+          messageLabel: "Message:",
+          submit: "Send"
+        },
+        footer: {
+          text: "© 2025 Programarte.cl. All rights reserved."
+        }
+      }
+    };
+
+    // Variable para llevar el idioma actual (por defecto español)
+    let currentLang = "es";
+
+    // Función que actualiza los textos de la página según el idioma seleccionado
+    function switchLanguage() {
+      currentLang = (currentLang === "es") ? "en" : "es";
+
+      // Actualizar el título del documento
+      document.title = translations[currentLang].title;
+
+      // Actualizar textos del menú de navegación
+      document.getElementById("nav-inicio").textContent = translations[currentLang].nav.inicio;
+      document.getElementById("nav-sobre-nosotros").textContent = translations[currentLang].nav.sobreNosotros;
+      document.getElementById("nav-servicios").textContent = translations[currentLang].nav.servicios;
+      document.getElementById("nav-portfolio").textContent = translations[currentLang].nav.portfolio;
+      document.getElementById("nav-testimonios").textContent = translations[currentLang].nav.testimonios;
+      document.getElementById("nav-contacto").textContent = translations[currentLang].nav.contacto;
+      
+      // Actualizar textos en la sección hero
+      reinitTyped(translations[currentLang].hero.typed);
+      document.getElementById("hero-subtitle").textContent = translations[currentLang].hero.subtitle;
+      document.getElementById("hero-contact-btn").textContent = translations[currentLang].hero.contactBtn;
+
+      // Actualizar textos en la sección "Sobre Nosotros"
+      document.getElementById("about-heading").textContent = translations[currentLang].about.heading;
+      document.getElementById("about-paragraph").textContent = translations[currentLang].about.paragraph;
+
+      // Actualizar textos en la sección "Nuestros Servicios"
+      document.getElementById("services-heading").textContent = translations[currentLang].services.heading;
+      document.getElementById("service1-title").textContent = translations[currentLang].services.service1.title;
+      document.getElementById("service1-desc").textContent = translations[currentLang].services.service1.description;
+      document.getElementById("service2-title").textContent = translations[currentLang].services.service2.title;
+      document.getElementById("service2-desc").textContent = translations[currentLang].services.service2.description;
+      document.getElementById("service3-title").textContent = translations[currentLang].services.service3.title;
+      document.getElementById("service3-desc").textContent = translations[currentLang].services.service3.description;
+      document.getElementById("service4-title").textContent = translations[currentLang].services.service4.title;
+      document.getElementById("service4-desc").textContent = translations[currentLang].services.service4.description;
+
+      // Actualizar texto en la sección "Portafolio"
+      document.getElementById("portfolio-heading").textContent = translations[currentLang].portfolio.heading;
+
+      // Actualizar título de la sección "Testimonios"
+      document.getElementById("testimonials-heading").textContent = translations[currentLang].testimonials.heading;
+
+      // Actualizar textos en la sección "Contacto"
+      document.getElementById("contact-heading").textContent = translations[currentLang].contact.heading;
+      document.getElementById("label-name").textContent = translations[currentLang].contact.nameLabel;
+      document.getElementById("label-email").textContent = translations[currentLang].contact.emailLabel;
+      document.getElementById("label-message").textContent = translations[currentLang].contact.messageLabel;
+      document.getElementById("contact-submit").textContent = translations[currentLang].contact.submit;
+
+      // Actualizar texto en el Footer
+      document.getElementById("footer-text").textContent = translations[currentLang].footer.text;
+
+      // Actualizar el botón de cambio de idioma con el icono correspondiente
+      document.getElementById("langSwitcher").innerHTML = (currentLang === "es")
+        ? '<img id="flag-icon" src="https://flagcdn.com/w20/us.png" alt="US Flag" style="vertical-align:middle; margin-right:5px;"> EN'
+        : '<img id="flag-icon" src="https://flagcdn.com/w20/es.png" alt="ES Flag" style="vertical-align:middle; margin-right:5px;"> ES';
+    }
+
+    // Asignar el evento de clic al botón de cambio de idioma
+    document.getElementById("langSwitcher").addEventListener("click", switchLanguage);
+
+    // Inicializar Typed.js con los textos en español al cargar la página
+    document.addEventListener("DOMContentLoaded", function() {
+      reinitTyped(translations[currentLang].hero.typed);
+    });
+  </script>
+</body>
+</html>
